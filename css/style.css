@@ -1,0 +1,600 @@
+/* Start Global Rules */
+* {
+    box-sizing: border-box;
+}
+
+:root {
+    --main-color: #ff914c;
+    --main-color-alt: #ff914ca1;
+    --text-color: #888;
+    --main-transition: 0.5s;
+    --title-padding: 100px;
+    --section-back: #f8f8fe;
+    --shadow: 0px 5px 20px -10px;
+}
+
+::-webkit-scrollbar {
+    width: 20px;
+}
+
+::-webkit-scrollbar-track {
+    background-color: var(--section-back);
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: var(--main-color);
+    border-radius: 3px;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Work Sans', sans-serif;
+}
+
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+    transition: var(--main-transition);
+}
+
+.container {
+    padding: 0 15px;
+    margin: 0 auto;
+}
+
+/* small */
+@media (min-width:768px) {
+    .container {
+        width: 750px;
+    }
+}
+
+/* medium */
+@media (min-width:992px) {
+    .container {
+        width: 970px;
+    }
+}
+
+/* large */
+@media (min-width:1200px) {
+    .container {
+        width: 1170px;
+    }
+}
+
+/*X-large */
+@media (min-width:1400px) {
+    .container {
+        width: 1370px;
+    }
+}
+
+/* End Global Rules */
+
+
+/* Start header  */
+header {
+    background-color: white;
+    background-image: url(../imgs/home-bg.png);
+    background-size: cover;
+    width: 95%;
+    display: flex;
+    justify-content: center;
+    margin: 10px auto;
+    border-radius: 20px;
+    box-shadow: 0px 5px 20px -10px;
+    position: sticky;
+    top: 0px;
+    z-index: 1000;
+    right: 2.5%;
+
+}
+
+header .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .container .logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .container .logo img {
+    width: 100px;
+    transition: var(--main-transition);
+}
+
+header .container .logo img:hover {
+    transform: scale(1.2);
+}
+
+header .container .links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .container .links a {
+    margin: 10px;
+    color: black;
+    border-radius: 10px;
+    font-size: 18px;
+    font-weight: 600;
+    transition: var(--main-transition);
+    display: flex;
+    justify-content: center;
+    width: 80px;
+}
+
+header .container .links a:hover {
+    background-color: var(--main-color);
+    color: white;
+    padding: 10px;
+}
+
+/* End header  */
+
+
+
+
+/* Start Landing  */
+.landing {
+    background-image: url(../imgs/home-bg.png);
+    background-size: cover;
+    height: calc(100vh - 90px);
+    padding: 20px;
+    display: flex;
+}
+
+.landing .container {
+    display: flex;
+    gap: 10%;
+    align-items: center;
+}
+
+.landing .container .img {
+    flex: 45%;
+}
+
+.landing .container .text {
+    flex: 45%;
+    align-items: center;
+}
+
+.landing .container .text p {
+    color: var(--main-color);
+    font-weight: 700;
+    font-size: 25px;
+    margin: 0;
+    text-transform: capitalize;
+}
+
+.landing .container .text h2 {
+    font-size: 55px;
+    margin: 10px 10px 10px 0px;
+    text-transform: capitalize;
+}
+
+.landing .container .text h2 span {
+    color: var(--main-color);
+    text-transform: uppercase;
+
+}
+
+.landing .container .text a {
+    color: white;
+    background-color: var(--main-color);
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    width: fit-content;
+    text-transform: uppercase;
+}
+
+.landing .container .text a:hover {
+    transform: scale(1.1);
+}
+
+/* End Landing  */
+
+
+
+/* Start Disc */
+.disc {
+    background-color: var(--section-back);
+}
+
+.disc .container {
+    display: flex;
+    align-items: center;
+    gap: 10%;
+}
+
+.disc .container .text {
+    flex: 45%;
+}
+
+.disc .container .text h3 {
+    font-size: 30px;
+    text-transform: capitalize;
+    font-weight: 700;
+}
+
+.disc .container .text h3 span {
+    font-size: 35px;
+    text-transform: uppercase;
+    color: var(--main-color);
+    box-shadow: var(--shadow);
+    padding: 10px;
+    border-radius: 15px;
+}
+
+.disc .container .text p {
+    font-size: 20px;
+    padding: 10px;
+    color: var(--text-color);
+}
+
+.disc .container .text a {
+    color: white;
+    background-color: var(--main-color);
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    width: fit-content;
+    text-transform: uppercase;
+}
+
+.disc .container .text a:hover {
+    transform: scale(1.1);
+}
+
+.disc .container .img {
+    flex: 45%;
+}
+
+/* End Disc  */
+
+
+
+
+/* Start pervent  */
+.prevent {
+    padding: 100px 0px;
+}
+
+.prevent .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    ;
+}
+
+.prevent h1 {
+    display: block;
+    margin: 20px;
+    text-align: center;
+}
+
+span {
+    color: var(--main-color);
+    text-transform: uppercase;
+    font-size: 35px;
+    font-family: cursive;
+}
+
+.prevent .container .box {
+    background-color: var(--section-back);
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    transition: var(--main-transition);
+}
+
+.prevent .container .box:hover {
+    transform: scale(1.1);
+}
+
+.prevent .container .box img {
+    width: 70px;
+    margin-top: 10px;
+}
+
+.prevent .container .box h3 {
+    font-size: blod;
+}
+
+.prevent .container .box p {
+    color: var(--text-color);
+    font-size: 18px;
+    line-height: 1.6;
+    font-weight: 500;
+}
+
+/* End pervent  */
+
+
+
+
+
+
+/* Start team  */
+.team {
+    background-color: var(--section-back);
+    padding: 100px 0px;
+}
+
+.team h1 {
+    margin: 20px;
+    padding-top: 30px;
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.team span {
+    color: var(--main-color);
+    text-transform: uppercase;
+    font-size: 35px;
+}
+
+.team .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    text-align: center;
+}
+
+.team .container .box {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    transition: var(--main-transition);
+}
+
+.team .container .box:hover {
+    transform: scale(1.1);
+}
+
+.team .container .box img {
+    width: 200px;
+    background-image: url(../imgs/home-bg.png);
+    background-size: cover;
+    border-radius: 20px;
+    /* filter: drop-shadow(5px 5px 5px hls(0deg 0% 0% / 0.5)); */
+    filter: drop-shadow(5px 5px 5px);
+}
+
+.team .container .box h3 {
+    color: var(--main-color);
+    text-transform: uppercase;
+    font-family: cursive;
+    font-weight: 800;
+}
+
+.team .container .box .links {
+    display: flex;
+    justify-content: center;
+}
+
+.team .container .box .links ul {
+    display: flex;
+}
+
+.team .container .box .links ul li img {
+    width: 50px;
+    margin: auto 10px;
+    filter: grayscale(100%);
+    transition: var(--main-transition);
+}
+
+.team .container .box:hover .links ul li img {
+    filter: grayscale(50%);
+}
+
+.team .container .box .links ul li img:hover {
+    filter: grayscale(0%);
+    transform: scale(1.1);
+}
+
+/* End team  */
+
+
+
+
+
+/* Start contact  */
+.contact {
+    padding: 100px 0px;
+}
+
+.contact h1 {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.contact .container .form {
+    display: flex;
+    flex-direction: column;
+    box-shadow: var(--shadow);
+    border-radius: 20px;
+    padding: 40px 20px;
+    background: var(--section-back);
+    background-image: url(../imgs/home-bg.png);
+    background-size: cover;
+
+}
+
+.contact .container .form input {
+    margin: 20px;
+    padding: 10px 20px;
+    border-radius: 10px;
+    border: 3px solid;
+    border-color: var(--main-color);
+    outline: none;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.contact .container .form [type="submit"] {
+    text-transform: capitalize;
+    font-size: 20px;
+    font-weight: 400;
+    background: white;
+    width: fit-content;
+    margin: auto;
+    cursor: pointer;
+    transition: var(--main-transition);
+}
+
+.contact .container .form [type="submit"]:hover {
+    transform: scale(1.1);
+    color: white;
+    background-color: var(--main-color);
+    border-color: white;
+}
+
+.contact .container .form textarea {
+    resize: none;
+    background-color: var(--section-back);
+    outline: none;
+    border-radius: 20px;
+    height: 500px;
+    margin: 20px;
+    padding: 20px;
+    border: 3px solid var(--main-color);
+}
+
+/* End contact  */
+
+
+
+/* Start blog  */
+.blog {
+    padding: 60px 0px;
+    background: url(../imgs/home-bg.png);
+    background-size: cover;
+}
+
+.blog h1 {
+    text-align: center;
+    text-transform: capitalize;
+}
+
+.blog .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+    gap: 10px;
+}
+
+.blog .container .box {
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: var(--shadow);
+    padding: 20px;
+    margin: 20px;
+    text-align: center;
+    transition: var(--main-transition);
+}
+
+.blog .container .box img {
+    width: 300px;
+    height: 300px;
+    background: url(../imgs/home-bg.png);
+    background-size: cover;
+    border-radius: 20px;
+
+}
+
+.blog .container .box h2 {
+    text-transform: capitalize;
+    font-size: 30px;
+    font-weight: 600;
+}
+
+.blog .container .box a {
+    color: white;
+    background-color: var(--main-color);
+    border-radius: 15px;
+    padding: 10px 20px;
+    font-size: 20px;
+    font-weight: 600;
+    display: block;
+    width: fit-content;
+    text-transform: uppercase;
+    margin: auto;
+}
+
+.blog .container .box a:hover {
+    transform: scale(1.1);
+}
+
+/* End blog  */
+
+
+
+
+/* Start header  */
+footer {
+    background-color: var(--section-back);
+}
+
+footer .container {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    text-align: center;
+}
+
+footer .text a {
+    color: var(--text-color);
+}
+
+footer h4 {
+    text-transform: capitalize;
+    transition: var(--main-transition);
+}
+
+footer p {
+    text-transform: capitalize;
+    transition: var(--main-transition);
+    color: var(--text-color);
+}
+
+footer .hov p:hover {
+    transform: scale(1.1);
+}
+
+footer h5 {
+    background-color: white;
+    display: block;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 800;
+    margin: 20px;
+    padding-top: 15px;
+}
+
+footer span {
+    font-size: 25px;
+    padding-top: 15px;
+}
+
+/* End header  */
